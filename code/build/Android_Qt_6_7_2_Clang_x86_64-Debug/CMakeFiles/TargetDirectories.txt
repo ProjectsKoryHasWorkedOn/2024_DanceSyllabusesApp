@@ -1,0 +1,17 @@
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/apk.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/aab.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/code.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/_qt_internal_apk_dependencies.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/apk_all.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/qt_internal_plugins.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/code_prepare_apk_dir.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/code_make_apk.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/code_make_aab.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/edit_cache.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/rebuild_cache.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/list_install_components.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/install.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/install/local.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/install/strip.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/code_autogen_timestamp_deps.dir
+C:/Users/Certa/Desktop/projects/dancesyllabuses_app/code/build/Android_Qt_6_7_2_Clang_x86_64-Debug/CMakeFiles/code_autogen.dir
