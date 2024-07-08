@@ -1,5 +1,6 @@
 import QtQuick
 import QtQuick.Controls
+import QtMultimedia
 
 Window {
     width: 640
@@ -14,6 +15,26 @@ Window {
         x: 50
         y: 250
     }
+
+    Rectangle {
+        width: 640
+        height: 480
+        visible: true
+
+        MediaPlayer {
+            id: player
+            source: "gremlin_dance.mp4"
+            videoOutput: videoOutput
+        }
+
+        VideoOutput {
+            id: videoOutput
+            anchors.fill: parent
+        }
+
+    }
+
+
 
     Row {
         anchors {
@@ -37,6 +58,12 @@ Window {
                 text: articles.text
                 color: page == articles ? "blue": "grey"
             }
+        }
+
+        Button{
+            id: gremlin_effects
+            text: qsTr("Gremlin")
+            onClicked: player.play()
         }
     }
 }
