@@ -125,99 +125,114 @@ Window {
 
 
 
-        Row {
-            id: navbar
-            anchors {
-                bottom: parent.bottom
-                // can't be window.bottom for some reason
+            Row {
+                id: navbar
+                anchors {
+                    bottom: parent.bottom
+                    left: parent.left
+                    right: parent.right
+                    // can't be window.bottom for some reason
+                }
+
+                property string page: "profile"
+                width: window.width
+
+                Button {
+                    id: profile_button
+                    width: (navbar.width / 5)
+                    text: qsTr("Profile")
+                    padding: 0
+                    background: Rectangle {
+                        color: "transparent"
+                    }
+                    onClicked:  navbar.page = "profile"
+                    contentItem: Text {
+                        text: profile_button.text
+                        color: navbar.page == "profile" ? "blue": "grey"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+                Button {
+                    id: articles_button
+                    width: (navbar.width / 5)
+                    text: qsTr("Articles")
+                    padding: 0
+                    background: Rectangle {
+                        color: "transparent"
+                    }
+                    onClicked: navbar.page = "articles"
+                    contentItem: Text {
+                        text: articles_button.text
+                        color: navbar.page == "articles" ? "blue": "grey"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+                Button {
+                    id: lessons_button
+                    width: (navbar.width / 5)
+                    text: qsTr("Lessons")
+                    padding: 0
+                    background: Rectangle {
+                        color: "transparent"
+                    }
+                    onClicked: navbar.page = "lessons"
+                    contentItem: Text {
+                        text: lessons_button.text
+                        color: navbar.page == "lessons" ? "blue": "grey"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+                Button {
+                    id: beat_finder_button
+                    width: (navbar.width / 5)
+                    text: qsTr("Beat finder")
+                    padding: 0
+                    background: Rectangle {
+                        color: "transparent"
+                    }
+                    onClicked: navbar.page = "beat_finder"
+                    contentItem: Text {
+                        text: beat_finder_button.text
+                        color: navbar.page == "beat_finder" ? "blue": "grey"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+                Button {
+                    id: settings_button
+                    width: (navbar.width / 5)
+                    text: qsTr("Settings")
+                    padding: 0
+                    background: Rectangle {
+                        color: "transparent"
+                    }
+                    onClicked: navbar.page = "settings"
+                    contentItem: Text {
+                        text: settings_button.text
+                        color: navbar.page == "settings" ? "blue": "grey"
+                        horizontalAlignment: Text.AlignHCenter
+                        verticalAlignment: Text.AlignVCenter
+                    }
+                }
+
+
             }
 
-            property string page: "profile"
-            width: window.width
 
-            Button {
-                id: profile_button
-                width: (navbar.width / 5)
-                text: qsTr("Profile")
-                padding: 0
-                background: Rectangle {
-                    color: "transparent"
-                }
-                onClicked:  navbar.page = "profile"
-                contentItem: Text {
-                    text: profile_button.text
-                    color: navbar.page == "profile" ? "blue": "grey"
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
+            Rectangle{
+                id: navbar_line
+                height: 1
+                width: window.width
+                color: "black"
+                anchors {
+                    bottom: navbar.top
+                    left: parent.left
+                    right: parent.right
                 }
             }
-            Button {
-                id: articles_button
-                width: (navbar.width / 5)
-                text: qsTr("Articles")
-                padding: 0
-                background: Rectangle {
-                    color: "transparent"
-                }
-                onClicked: navbar.page = "articles"
-                contentItem: Text {
-                    text: articles_button.text
-                    color: navbar.page == "articles" ? "blue": "grey"
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-            }
-            Button {
-                id: lessons_button
-                width: (navbar.width / 5)
-                text: qsTr("Lessons")
-                padding: 0
-                background: Rectangle {
-                    color: "transparent"
-                }
-                onClicked: navbar.page = "lessons"
-                contentItem: Text {
-                    text: lessons_button.text
-                    color: navbar.page == "lessons" ? "blue": "grey"
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-            }
-            Button {
-                id: beat_finder_button
-                width: (navbar.width / 5)
-                text: qsTr("Beat finder")
-                padding: 0
-                background: Rectangle {
-                    color: "transparent"
-                }
-                onClicked: navbar.page = "beat_finder"
-                contentItem: Text {
-                    text: beat_finder_button.text
-                    color: navbar.page == "beat_finder" ? "blue": "grey"
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-            }
-            Button {
-                id: settings_button
-                width: (navbar.width / 5)
-                text: qsTr("Settings")
-                padding: 0
-                background: Rectangle {
-                    color: "transparent"
-                }
-                onClicked: navbar.page = "settings"
-                contentItem: Text {
-                    text: settings_button.text
-                    color: navbar.page == "settings" ? "blue": "grey"
-                    horizontalAlignment: Text.AlignHCenter
-                    verticalAlignment: Text.AlignVCenter
-                }
-            }
-
-
-        }
 
 
 
