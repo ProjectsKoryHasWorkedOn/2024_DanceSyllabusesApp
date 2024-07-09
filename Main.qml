@@ -96,26 +96,45 @@ Window {
         }
     }
 
-
+        // @Phillip: How come text isn't visible. Perhaps it can be seen on mobile device?
         TextField {
             id: username_field
             echoMode: TextInput.Normal
             activeFocusOnPress: true
             placeholderText: qsTr("Enter username")
-            selectedTextColor: "#000000"
+            maximumLength: 20
+            padding: 0
             placeholderTextColor: "#A9A9A9"
             width: parent.width
-            height: 55
-            anchors{
-                top: welcome_text.bottom
-            }
+            height: 52
+
+            font.pixelSize: height - 20
+
+            color: "black"
+
+            y: 50
 
             // can't be window for some reason
 
-            onTextChanged: {
-                // need to somehow get id of user_details in UserDetails file
-                UserDetails.username = username_field.text
-                welcome_text.text = qsTr("Hello ") + UserDetails.Username + qsTr("!")
+            // : username_field.text
+
+            // @Phillip: need to somehow move this var into UserDetails.qml file
+            property string username
+
+            function updateUsername(){
+                placeholderText = ""
+
+
+                username = username_field.text
+                welcome_text.text = qsTr("Hello ") + username + qsTr("!")
+            }
+
+            onTextEdited: {
+                updateUsername();
+            }
+
+            onEditingFinished:{
+                updateUsername();
             }
 
             background: Rectangle {
