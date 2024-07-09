@@ -1,37 +1,41 @@
 cmake_minimum_required(VERSION 3.16)
 
-project(dancesyllabuses_app VERSION 0.1 LANGUAGES CXX)
+project(Dance_Syllabuses VERSION 0.1 LANGUAGES CXX)
 
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(Qt6 COMPONENTS Core Quick Multimedia QuickControls2 REQUIRED)
+# Set minimum version to 6.0. Higher than this causes program to die when it's run
+find_package(Qt6 6.0 COMPONENTS Core Quick Multimedia QuickControls2 Qml REQUIRED)
 
-qt_standard_project_setup()
+qt_standard_project_setup(REQUIRES 6.0)
 
-qt_add_executable(appdancesyllabuses_app
+qt_add_executable(appDance_Syllabuses
     main.cpp
 )
 
-qt_add_qml_module(appdancesyllabuses_app
-    URI dancesyllabuses_app
-    VERSION 1.0
-    QML_FILES
-        Main.qml
-   RESOURCES gremlin.jpg gremlin_dance.mp4
+qt_add_qml_module(appDance_Syllabuses
+   URI Dance_Syllabuses
+   VERSION 1.0
+   QML_FILES Main.qml UserDetails.qml
+   RESOURCES
+    import/img/gremlin.jpg
+    import/video/gremlin_dance.mp4
+    import/sfx/gremlin_laugh.wav
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
 # If you are developing for iOS or macOS you should consider setting an
 # explicit, fixed bundle identifier manually though.
-set_target_properties(appdancesyllabuses_app PROPERTIES
-#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appdancesyllabuses_app
+set_target_properties(appDance_Syllabuses PROPERTIES
+#    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appDance_Syllabuses
     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
     MACOSX_BUNDLE TRUE
     WIN32_EXECUTABLE TRUE
 )
 
-target_link_libraries(appdancesyllabuses_app PRIVATE
+target_link_libraries(appDance_Syllabuses PRIVATE
+    Qt6::Qml
     Qt6::Core
     Qt6::Quick
     Qt6::Multimedia
@@ -39,7 +43,7 @@ target_link_libraries(appdancesyllabuses_app PRIVATE
 )
 
 include(GNUInstallDirs)
-install(TARGETS appdancesyllabuses_app
+install(TARGETS appDance_Syllabuses
     BUNDLE DESTINATION .
     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
