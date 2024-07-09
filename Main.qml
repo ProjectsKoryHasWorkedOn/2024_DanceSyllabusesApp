@@ -48,10 +48,10 @@ Window {
 
     Button{
         id: gremlin_button
-        y: 50
+        y: 100
         text: qsTr("Gremlin")
 
-        onClicked: {
+        onPressed: {
             if(playsound.playing == true){
                 audio_video_playback.playingSound = true
             }
@@ -66,7 +66,7 @@ Window {
 
 
         onReleased: {
-            if(video_player.PlayingState){
+            if(video_player.playing == true){
                 audio_video_playback.playingVideo = true
             }
             else{
@@ -91,6 +91,9 @@ Window {
         font.family: "Helvetica"
         font.pointSize: 24
         color: "grey"
+        anchors{
+            top: parent.top
+        }
     }
 
 
@@ -99,11 +102,13 @@ Window {
             echoMode: TextInput.Normal
             activeFocusOnPress: true
             placeholderText: qsTr("Enter username")
-            anchors.centerIn: parent
             selectedTextColor: "#000000"
             placeholderTextColor: "#A9A9A9"
             width: parent.width
             height: 55
+            anchors{
+                top: welcome_text.bottom
+            }
 
             // can't be window for some reason
 
