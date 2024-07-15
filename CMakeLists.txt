@@ -6,7 +6,7 @@ set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 
-find_package(Qt6 6.0 COMPONENTS Core Quick Multimedia QuickControls2 Qml REQUIRED)
+find_package(Qt6 6.0 COMPONENTS Sql Gui Core Quick Multimedia QuickControls2 Qml REQUIRED)
 
 qt_standard_project_setup(REQUIRES 6.0)
 
@@ -20,13 +20,14 @@ qt_add_qml_module(appDance_Syllabuses
    QML_FILES
     Main.qml UserDetails.qml ProfilePage.qml ArticlesPage.qml SettingsPage.qml LessonsPage.qml BeatFinderPage.qml
     LessonPage.qml NavigationSystem.qml WelcomePage.qml SignUpPage.qml LoginPage.qml
+    UserSessionDetails.qml DefaultStylingAndProperties.qml
    RESOURCES
     import/img/gremlin.jpg
     import/video/gremlin_dance.mp4
     import/sfx/gremlin_laugh.wav
     import/img/text_input_border_black.webp
     import/sci/text_input_border.sci
-    QML_FILES UserSessionDetails.qml
+
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
@@ -46,6 +47,8 @@ target_link_libraries(appDance_Syllabuses PRIVATE
     Qt6::Quick
     Qt6::Multimedia
     Qt6::QuickControls2
+    Qt6::Gui
+    Qt6::Sql
 )
 
 include(GNUInstallDirs)

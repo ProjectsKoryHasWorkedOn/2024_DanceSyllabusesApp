@@ -5,9 +5,10 @@ Item {
     Text {
         id: program_title_text
         text: qsTr("Dance Syllabuses")
-        font.family: "Helvetica"
-        font.pointSize: 32
-        color: "grey"
+
+        font: instance_of_default_styling_and_properties.header1Font
+        color: instance_of_default_styling_and_properties.headerFontColor
+
         anchors {
             top: parent.top
         }
@@ -16,7 +17,7 @@ Item {
     Image{
         id: program_preview_media
         source: "import/img/gremlin.jpg"
-        width: 250
+        width: (parent.width - 50)
         height: 250
 
         anchors{

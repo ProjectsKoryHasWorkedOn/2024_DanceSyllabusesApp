@@ -132,7 +132,7 @@ Item {
 
 
 
-    // volume slider button
-    // loop button
-    // sfx off/on setting
+    // @todo: volume slider button
+    // @todo: loop button
+    // @todo: sfx off/on setting
 }

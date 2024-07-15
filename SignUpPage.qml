@@ -36,7 +36,7 @@ Item {
 
             /* Sizing */
             width: parent.width
-            height: 28
+            height: instance_of_default_styling_and_properties.defaultTextFieldHeight
 
             /* Styling */
             BorderImage{
@@ -58,14 +58,14 @@ Item {
 
                 /* User input validation */
                 validator: RegularExpressionValidator  {
-                    regularExpression: /[^\s\n\r]+/
+                    regularExpression: instance_of_default_styling_and_properties.defaultTextFieldNamesValidationRegExp
                 }
 
                 /* Styling */
-                font.pixelSize: 16
+                font.pixelSize: instance_of_default_styling_and_properties.defaultTextFieldFontSize
                 font.underline: false
                 font.weight: Font.Normal
-                color: acceptableInput ? "black" : "red"
+                color: acceptableInput ? instance_of_default_styling_and_properties.defaultTextFieldValidInputColor : instance_of_default_styling_and_properties.defaultTextFieldInvalidInputColor
 
                 /* User interaction */
                 echoMode: TextInput.Normal
@@ -88,7 +88,7 @@ Item {
 
             /* Sizing */
             width: parent.width
-            height: 28
+            height: instance_of_default_styling_and_properties.defaultTextFieldHeight
 
             /* Styling */
             BorderImage{
@@ -110,14 +110,14 @@ Item {
 
                 /* User input validation */
                 validator: RegularExpressionValidator  {
-                    regularExpression: /([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)/
+                    regularExpression: instance_of_default_styling_and_properties.defaultTextFieldEmailsValidationRegExp
                 }
 
                 /* Styling */
-                font.pixelSize: 16
+                font.pixelSize: instance_of_default_styling_and_properties.defaultTextFieldFontSize
                 font.underline: false
                 font.weight: Font.Normal
-                color: acceptableInput ? "black" : "red"
+                color: acceptableInput ? instance_of_default_styling_and_properties.defaultTextFieldValidInputColor : instance_of_default_styling_and_properties.defaultTextFieldInvalidInputColor
 
                 /* User interaction */
                 echoMode: TextInput.Normal
@@ -140,7 +140,7 @@ Item {
 
             /* Sizing */
             width: parent.width
-            height: 28
+            height: instance_of_default_styling_and_properties.defaultTextFieldHeight
 
             /* Styling */
             BorderImage{
@@ -162,14 +162,14 @@ Item {
 
                 /* User input validation */
                 validator: RegularExpressionValidator  {
-                    regularExpression: /[^\s\n\r]+/
+                    regularExpression: instance_of_default_styling_and_properties.defaultTextFieldPasswordsValidationRegExp
                 }
 
                 /* Styling */
-                font.pixelSize: 16
+                font.pixelSize: instance_of_default_styling_and_properties.defaultTextFieldFontSize
                 font.underline: false
                 font.weight: Font.Normal
-                color: acceptableInput ? "black" : "red"
+                color: acceptableInput ? instance_of_default_styling_and_properties.defaultTextFieldValidInputColor : instance_of_default_styling_and_properties.defaultTextFieldInvalidInputColor
 
                 /* User interaction */
                 echoMode: TextInput.PasswordEchoOnEdit
@@ -196,6 +196,8 @@ Item {
 
         onClicked: {
             updateUserDetails();
+            // @todo: Store user details in a database
+                // @todo: If user email doesn't match existing user email in database
             user_session_details_instance.page = "LoginPage.qml"
         }
     }
