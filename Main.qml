@@ -1,7 +1,6 @@
 import QtQuick
 import QtQuick.Controls
 import QtQuick.Window
-import QtMultimedia
 
 Window {
     id: window
@@ -15,13 +14,17 @@ Window {
         id: instance_of_user_details
     }
 
+    UserSessionDetails{
+        id: user_session_details_instance
+    }
+
     StackView {
         id: mainStack
         anchors.fill: parent
 
         Component.onCompleted: {
             // if not logged in
-            mainStack.push('WelcomePage.qml');
+            user_session_details_instance.page = "WelcomePage.qml"
             // else push another
         }
     }

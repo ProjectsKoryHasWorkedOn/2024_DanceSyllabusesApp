@@ -33,7 +33,7 @@ Item {
             id: login_screen_button
             text: qsTr("Log-in")
             onClicked: {
-                mainStack.replace("LoginPage.qml")
+                user_session_details_instance.page = "LoginPage.qml"
             }
         }
 
@@ -41,7 +41,7 @@ Item {
             id: signup_screen_button
             text: qsTr("Sign-up")
             onClicked: {
-                mainStack.replace("SignUpPage.qml")
+                user_session_details_instance.page = "SignUpPage.qml"
             }
         }
     }

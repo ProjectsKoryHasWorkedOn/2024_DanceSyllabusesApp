@@ -8,9 +8,10 @@ Item{
     visible: true
     enabled: true
 
+
     Row {
         id: navbar
-        property string page: "profile"
+
         width: parent.width
         anchors {
             bottom: parent.bottom
@@ -28,12 +29,11 @@ Item{
                 color: "transparent"
             }
             onClicked:{
-                navbar.page = "profile"
-                mainStack.replace("ProfilePage.qml")
+                user_session_details_instance.page = "ProfilePage.qml"
             }
             contentItem: Text {
                 text: profile_button.text
-                color: navbar.page == "profile" ? "blue" : "grey"
+                color: user_session_details_instance.page == "ProfilePage.qml" ? "blue" : "grey"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }
@@ -47,12 +47,11 @@ Item{
                 color: "transparent"
             }
             onClicked:{
-                navbar.page = "articles"
-                mainStack.replace("ArticlesPage.qml")
+                user_session_details_instance.page = "ArticlesPage.qml"
             }
             contentItem: Text {
                 text: articles_button.text
-                color: navbar.page == "articles" ? "blue" : "grey"
+                color: user_session_details_instance.page == "ArticlesPage.qml" ? "blue" : "grey"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }
@@ -66,12 +65,11 @@ Item{
                 color: "transparent"
             }
             onClicked:{
-                navbar.page = "lessons"
-                mainStack.replace("LessonsPage.qml")
+                user_session_details_instance.page = "LessonsPage.qml"
             }
             contentItem: Text {
                 text: lessons_button.text
-                color: navbar.page == "lessons" ? "blue" : "grey"
+                color: user_session_details_instance.page == "LessonsPage.qml" ? "blue" : "grey"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }
@@ -85,12 +83,11 @@ Item{
                 color: "transparent"
             }
             onClicked:{
-                navbar.page = "beat_finder"
-                mainStack.replace("BeatFinderPage.qml")
+                user_session_details_instance.page = "BeatFinderPage.qml"
             }
             contentItem: Text {
                 text: beat_finder_button.text
-                color: navbar.page == "beat_finder" ? "blue" : "grey"
+                color: user_session_details_instance.page == "BeatFinderPage.qml" ? "blue" : "grey"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }
@@ -104,12 +101,11 @@ Item{
                 color: "transparent"
             }
             onClicked:{
-                navbar.page = "settings"
-                mainStack.replace("SettingsPage.qml")
+                user_session_details_instance.page = "SettingsPage.qml"
             }
             contentItem: Text {
                 text: settings_button.text
-                color: navbar.page == "settings" ? "blue" : "grey"
+                color: user_session_details_instance.page == "SettingsPage.qml" ? "blue" : "grey"
                 horizontalAlignment: Text.AlignHCenter
                 verticalAlignment: Text.AlignVCenter
             }

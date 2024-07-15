@@ -1,6 +1,5 @@
 import QtQuick
 
-
 QtObject {
     id: user_details
     property string user_name

@@ -8,7 +8,7 @@ Item {
         text: qsTr("Back")
 
         onClicked: {
-            mainStack.replace("WelcomePage.qml")
+            user_session_details_instance.page = "WelcomePage.qml"
         }
     }
 
@@ -96,6 +96,10 @@ Item {
 
         id: create_account_button
         text: qsTr("Create account")
+
+        onClicked: {
+            user_session_details_instance.page = "LoginPage.qml"
+        }
     }
 
 

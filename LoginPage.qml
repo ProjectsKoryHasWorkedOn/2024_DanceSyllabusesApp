@@ -37,7 +37,7 @@ Item {
             width: 50
             text: qsTr("Log-in to account")
             onClicked: {
-                mainStack.replace("ProfilePage.qml")
+                user_session_details_instance.page = "ProfilePage.qml"
             }
     }
 

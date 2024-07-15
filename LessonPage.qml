@@ -1,4 +1,6 @@
 import QtQuick
+import QtMultimedia
+import QtQuick.Controls
 
 Item {
 
