@@ -8,7 +8,6 @@ Item{
     visible: true
     enabled: true
 
-
     Row {
         id: navbar
 

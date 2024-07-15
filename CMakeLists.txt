@@ -24,7 +24,7 @@ qt_add_qml_module(appDance_Syllabuses
     import/img/gremlin.jpg
     import/video/gremlin_dance.mp4
     import/sfx/gremlin_laugh.wav
-    import/img/text_input_border.webp
+    import/img/text_input_border_black.webp
     import/sci/text_input_border.sci
     QML_FILES UserSessionDetails.qml
 )
