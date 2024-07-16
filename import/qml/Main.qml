@@ -1,0 +1,51 @@
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Window
+
+Window {
+    id: window
+    width: Screen.width
+    height: Screen.height
+    visible: true
+    title: qsTr("Latin Dance Program")
+    color: "#ffffff"
+
+    GblVarsDefaultQMLClassValues {
+        id: instance_of_default_qml_class_values
+    }
+
+    GblVarsUserDetails {
+        id: instance_of_user_details
+    }
+
+    GblVarsUserSessionDetails{
+        id: user_session_details_instance
+    }
+
+    ComponentSFXPlayer{
+        id: instance_of_sfx_player
+    }
+
+    ComponentTitleBar{
+        id: instance_of_title_bar
+    }
+
+    ComponentNavBar{
+        id: instance_of_navigation_system
+    }
+
+
+
+    StackView {
+        id: mainStack
+        anchors.fill: parent
+
+        Component.onCompleted: {
+            // @todo: Check if user has logged in
+            // if not logged in
+            user_session_details_instance.page = "PageWelcome.qml"
+            // else
+            // user_session_details_instance.page = "PageProfile.qml"
+        }
+    }
+}

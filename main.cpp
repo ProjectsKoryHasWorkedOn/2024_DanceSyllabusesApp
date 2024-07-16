@@ -18,6 +18,7 @@ int main(int argc, char *argv[])
 
     // @todo: Make this work
         // @todo: Address this "QSqlDatabase: QMYSQL driver not loaded"
+        // @todo: Communicate with web server from a API
     if (db.open())
     {
         qDebug() << "Connected!";
@@ -27,10 +28,10 @@ int main(int argc, char *argv[])
         qDebug() << "Failed to connect.";
         return 0;
     }
-*/
+    */
 
     QQmlApplicationEngine engine;
-    const QUrl url(QStringLiteral("qrc:/Dance_Syllabuses/Main.qml"));
+    const QUrl url(QStringLiteral("qrc:/Dance_Syllabuses/import/qml/Main.qml"));
     QObject::connect(
         &engine,
         &QQmlApplicationEngine::objectCreationFailed,

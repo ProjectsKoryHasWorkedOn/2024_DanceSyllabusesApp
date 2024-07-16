@@ -18,13 +18,26 @@ qt_add_qml_module(appDance_Syllabuses
    URI Dance_Syllabuses
    VERSION 1.0
    QML_FILES
-    Main.qml UserDetails.qml ProfilePage.qml ArticlesPage.qml SettingsPage.qml LessonsPage.qml BeatFinderPage.qml
-    LessonPage.qml NavigationSystem.qml WelcomePage.qml SignUpPage.qml LoginPage.qml
-    UserSessionDetails.qml DefaultStylingAndProperties.qml
+    import/qml/Main.qml
+    import/qml/PageProfile.qml
+    import/qml/PageArticles.qml
+    import/qml/PageSettings.qml
+    import/qml/PageLessons.qml
+    import/qml/PageBeatFinder.qml
+    import/qml/PageLesson.qml
+    import/qml/PageWelcome.qml
+    import/qml/PageSignUp.qml
+    import/qml/PageLogin.qml
+    import/qml/ComponentNavBar.qml
+    import/qml/ComponentSFXPlayer.qml
+    import/qml/ComponentTitleBar.qml
+    import/qml/GblVarsDefaultQMLClassValues.qml
+    import/qml/GblVarsUserDetails.qml
+    import/qml/GblVarsUserSessionDetails.qml
    RESOURCES
-    import/img/gremlin.jpg
+    import/img/welcome_page_placeholder.webp
     import/video/gremlin_dance.mp4
-    import/sfx/gremlin_laugh.wav
+    import/sfx/button_pressed.wav
     import/img/text_input_border_black.webp
     import/sci/text_input_border.sci
 
