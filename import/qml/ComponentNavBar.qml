@@ -19,7 +19,7 @@ Item{
 
         Row {
             id: navbar
-
+            height: instance_of_default_qml_class_values.defaultNavBarHeight
             width: parent.width
             anchors {
                 bottom: parent.bottom

@@ -64,6 +64,7 @@ Item {
         }
         onClicked: {
             instance_of_sfx_player.activateSoundPlayer(instance_of_default_qml_class_values.defaultButtonClickSound);
+
             if(
                 (user_session_details_instance.page == "PageLogin.qml") ||
                 (user_session_details_instance.page == "PageSignUp.qml")
@@ -72,7 +73,7 @@ Item {
             }
 
             if(user_session_details_instance.page == "PageArticle.qml"){
-                user_session_details_instance.page = "PageArticle.qml"
+                user_session_details_instance.page = "PageArticles.qml"
             }
 
 

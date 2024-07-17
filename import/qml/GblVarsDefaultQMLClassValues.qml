@@ -19,6 +19,9 @@ QtObject {
     readonly property int defaultButtonBorderWidth: 1
     readonly property color defaultButtonBorderColor: "#FFFFFF"
 
+    /* Navigation bar styling */
+    readonly property int defaultNavBarHeight: defaultButtonHeight
+
     /* Resource file paths */
     readonly property string defaultButtonClickSound: baseDirectory + "import/sfx/button_pressed.wav"
     readonly property string welcomeScreenImage: baseDirectory + "import/img/welcome_page_placeholder.webp"
@@ -114,5 +117,8 @@ QtObject {
     // Must be in e-mail format
     readonly property string defaultTextFieldEmailsValidationString: "([a-zA-Z0-9._-]+@[a-zA-Z0-9._-]+\.[a-zA-Z0-9_-]+)"
     readonly property var defaultTextFieldEmailsValidationRegExp : new RegExp(defaultTextFieldEmailsValidationString)
+
+    /* Page size properties */
+    readonly property int amountToDecreaseHeightOfPageBy: defaultNavBarHeight + programTitleBarHeight
 
 }

@@ -9,33 +9,41 @@ Item {
         height: (parent.height - instance_of_default_qml_class_values.programTitleBarHeight)
         // @todo: Also subtract size of navbar from height of it
 
-        Text{
-          id: article_preview_title_text
-          text: qsTr("[Article title]")
-          font: instance_of_default_qml_class_values.bodyTextFont
-          color: instance_of_default_qml_class_values.bodyTextFontColor
-          anchors{
-              top: parent.top
-          }
-        }
+        Item{
+            id: first_article_container
 
-        Text{
-            id: article_preview_blurb_text
-            text: qsTr("[Article blurb]")
-            font: instance_of_default_qml_class_values.bodyTextFont
-            color: instance_of_default_qml_class_values.bodyTextFontColor
-            anchors{
-                top: article_preview_title_text.bottom
+            width: parent.width
+            height: 100
+
+            Text{
+              id: article_preview_title_text
+              text: qsTr("[Article title]")
+              font: instance_of_default_qml_class_values.bodyTextFont
+              color: instance_of_default_qml_class_values.bodyTextFontColor
+              anchors{
+                  top: parent.top
+              }
             }
+
+            Text{
+                id: article_preview_blurb_text
+                text: qsTr("[Article blurb]")
+                font: instance_of_default_qml_class_values.bodyTextFont
+                color: instance_of_default_qml_class_values.bodyTextFontColor
+                anchors{
+                    top: article_preview_title_text.bottom
+                }
+            }
+
+               MouseArea{
+                anchors.fill: parent
+                onClicked: {
+                    user_session_details_instance.page = "PageArticle.qml"
+                }
+
+               }
         }
 
-       MouseArea{
-        anchors.fill: parent
-        onClicked: {
-            user_session_details_instance.page = "PageArticle.qml"
-        }
-
-       }
 
 
     }
