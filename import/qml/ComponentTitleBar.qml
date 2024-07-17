@@ -4,6 +4,8 @@ import QtQuick.Controls
 Item {
     id: titlebar
     width: parent.width
+    height: instance_of_default_qml_class_values.programTitleBarHeight
+
     anchors {
         top: parent.top
     }
@@ -11,7 +13,7 @@ Item {
     Rectangle{
         width: parent.width
         color: instance_of_default_qml_class_values.programTitleBarColor
-        height: instance_of_default_qml_class_values.programTitleBarHeight
+        height: parent.height
 
         Text {
             id: program_title_text
@@ -27,6 +29,8 @@ Item {
         }
     }
 
+    // @todo: Could make this page navigation based on user back button input
+        // @todo: Add "phone hotkey" for this
 
     Button{
         id: back_to_welcome_screen_button_B
@@ -34,9 +38,11 @@ Item {
         width: instance_of_default_qml_class_values.defaultCornerButtonWidth
         height: instance_of_default_qml_class_values.defaultButtonHeight
         // Show it if it's on the sign up or login pages
-        visible:
+        visible: (
             (user_session_details_instance.page == "PageLogin.qml") ||
-            (user_session_details_instance.page == "PageSignUp.qml") ? true : false
+            (user_session_details_instance.page == "PageSignUp.qml") ||
+            (user_session_details_instance.page == "PageArticle.qml")
+        ) ? true : false
         background: Rectangle {
             color: instance_of_default_qml_class_values.defaultButtonBackgroundColor
             radius: instance_of_default_qml_class_values.defaultButtonRoundedCornerValue
@@ -58,15 +64,34 @@ Item {
         }
         onClicked: {
             instance_of_sfx_player.activateSoundPlayer(instance_of_default_qml_class_values.defaultButtonClickSound);
-            user_session_details_instance.page = "PageWelcome.qml"
+            if(
+                (user_session_details_instance.page == "PageLogin.qml") ||
+                (user_session_details_instance.page == "PageSignUp.qml")
+            ){
+                user_session_details_instance.page = "PageWelcome.qml"
+            }
+
+            if(user_session_details_instance.page == "PageArticle.qml"){
+                user_session_details_instance.page = "PageArticle.qml"
+            }
+
+
         }
     }
 
+
+
+    // @todo: Add filters button on LHS in place of quit button
+    // No need to have quit button as most apps are closed via Android phone OS
+
     Button {
-        id: quit_button
+        id: filters_button
         width: instance_of_default_qml_class_values.defaultCornerButtonWidth
         height: instance_of_default_qml_class_values.defaultButtonHeight
-        text: qsTr("Quit")
+        text: qsTr("Filters")
+        visible: (
+            (user_session_details_instance.page == "PageLessons.qml")
+        ) ? true : false
 
         anchors{
             right: parent.right
@@ -89,7 +114,8 @@ Item {
         }
 
         onPressed: {
-            Qt.quit()
+            // @todo: Open sidebar
+
         }
     }
 }

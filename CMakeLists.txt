@@ -34,13 +34,13 @@ qt_add_qml_module(appDance_Syllabuses
     import/qml/GblVarsDefaultQMLClassValues.qml
     import/qml/GblVarsUserDetails.qml
     import/qml/GblVarsUserSessionDetails.qml
+    import/qml/PageArticle.qml
    RESOURCES
     import/img/welcome_page_placeholder.webp
     import/video/gremlin_dance.mp4
     import/sfx/button_pressed.wav
     import/img/text_input_border_black.webp
     import/sci/text_input_border.sci
-
 )
 
 # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.

@@ -30,11 +30,33 @@ Window {
         id: instance_of_title_bar
     }
 
-    ComponentNavBar{
-        id: instance_of_navigation_system
+    Item{
+
+
+        Loader{
+            id: navbar_loader
+            sourceComponent: undefined
+
+            function show(componentToShow){
+             sourceComponent = componentToShow
+            }
+
+            function hide(){
+                sourceComponent = undefined
+            }
+
+        }
+
+        Component{
+            id: navbar_to_load_in
+
+            ComponentNavBar{
+                id: instance_of_navigation_system
+            }
+        }
+
+
     }
-
-
 
     StackView {
         id: mainStack
