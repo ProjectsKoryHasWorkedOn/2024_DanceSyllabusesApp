@@ -82,7 +82,7 @@ Item {
 
 
 
-    // @todo: Add filters button on LHS in place of quit button
+    // @todo: Add filters button on RHS in place of quit button
     // No need to have quit button as most apps are closed via Android phone OS
 
     Button {

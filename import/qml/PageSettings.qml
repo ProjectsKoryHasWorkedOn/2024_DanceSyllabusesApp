@@ -17,6 +17,7 @@ Item {
             color: "white"
         }
 
+
         ScrollView{
             id: add_scrollbar_to_settings_page_contents
             anchors{
@@ -430,5 +431,5 @@ Item {
             }
         }
      }
-   }
+  }
 }
