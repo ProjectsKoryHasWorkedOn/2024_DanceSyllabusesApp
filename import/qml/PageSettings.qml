@@ -7,42 +7,31 @@ Item {
         id: settings_page_contents_container
         y: instance_of_default_qml_class_values.programTitleBarHeight // Move element down so it's below title bar
         width: parent.width
-        height: (parent.height
-                 - instance_of_default_qml_class_values.amountToDecreaseHeightOfPageBy)
+        height: (parent.height - instance_of_default_qml_class_values.amountToDecreaseHeightOfPageBy)
 
-        // Debug rectangle
+        // Page background
         Rectangle {
             anchors.fill: parent
             width: parent.width
             height: parent.height
-            color: "orange"
+            color: "white"
         }
 
-/*
         ScrollView{
             id: add_scrollbar_to_settings_page_contents
             anchors{
                 top: parent.top
             }
-            width: parent.width
-            height: parent.height
-            contentWidth: parent.width
-            contentHeight: put_settings_page_contents_into_a_column.height
+            anchors.fill: parent
+            contentWidth: availableWidth
             clip: true
             ScrollBar.vertical.policy: ScrollBar.AlwaysOn
             ScrollBar.horizontal.policy: ScrollBar.AlwaysOff
-*/
+
         ColumnLayout {
             id: put_settings_page_contents_into_a_column
             anchors.fill: parent
             spacing: 2
-
-            // Debug rectangle
-            Rectangle {
-                Layout.fillWidth: true
-                height: 50
-                color: "blue"
-            }
 
             // Section 01
             Text {
@@ -54,7 +43,7 @@ Item {
             Button {
                 id: reset_program_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Reset program")
                 padding: 0
 
@@ -97,7 +86,7 @@ Item {
             Button {
                 id: mute_global_sfx_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Turn of all SFX")
                 padding: 0
 
@@ -129,7 +118,7 @@ Item {
             Button {
                 id: log_out_of_account_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Log-out of account")
                 padding: 0
 
@@ -154,7 +143,7 @@ Item {
             Button {
                 id: delete_account_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Delete account")
                 padding: 0
 
@@ -179,7 +168,7 @@ Item {
             Button {
                 id: change_name_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Change name")
                 padding: 0
 
@@ -204,7 +193,7 @@ Item {
             Button {
                 id: change_email_address_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Change e-mail address")
                 padding: 0
 
@@ -229,7 +218,7 @@ Item {
             Button {
                 id: change_password_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Change password")
                 padding: 0
 
@@ -261,7 +250,7 @@ Item {
             Button {
                 id: share_suggestions_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Share suggestions")
                 padding: 0
 
@@ -286,7 +275,7 @@ Item {
             Button {
                 id: share_the_app_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Share the app")
                 padding: 0
 
@@ -311,7 +300,7 @@ Item {
             Button {
                 id: rate_the_app_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Rate the app")
                 padding: 0
 
@@ -343,7 +332,7 @@ Item {
             Button {
                 id: view_website_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Website")
                 padding: 0
 
@@ -368,7 +357,7 @@ Item {
             Button {
                 id: view_instagram_page_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Instagram page")
                 padding: 0
 
@@ -393,7 +382,7 @@ Item {
             Button {
                 id: view_facebook_page_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("Facebook page")
                 padding: 0
 
@@ -418,7 +407,7 @@ Item {
             Button {
                 id: view_youtube_channel_button
                 Layout.fillWidth: true
-                height: instance_of_default_qml_class_values.defaultButtonHeight
+                Layout.preferredHeight: instance_of_default_qml_class_values.defaultButtonHeight
                 text: qsTr("YouTube channel")
                 padding: 0
 
@@ -440,6 +429,6 @@ Item {
                 }
             }
         }
-    // }
+     }
    }
 }

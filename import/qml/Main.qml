@@ -1,6 +1,7 @@
 import QtQuick
-import QtQuick.Controls
 import QtQuick.Window
+import QtQuick.Controls
+import QtQuick.Layouts
 
 Window {
     id: window
@@ -70,4 +71,5 @@ Window {
             // user_session_details_instance.page = "PageProfile.qml"
         }
     }
+
 }
