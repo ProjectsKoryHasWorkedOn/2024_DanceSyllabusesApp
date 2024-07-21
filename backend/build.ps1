@@ -16,14 +16,14 @@ if (-Not ($LASTEXITCODE -eq "0")) {
   exit 1
 }
 
-cmake -DCMAKE_BUILD_TYPE=Release ..
-cmake --build . --config Release --parallel $cpu_count
+# cmake -DCMAKE_BUILD_TYPE=Release ..
+# cmake --build . --config Release --parallel $cpu_count
 
-if (-Not ($LASTEXITCODE -eq "0")) {
-  Write-Output "cmake --build for Release mode failed!"
-  Pop-Location
-  exit 1
-}
+# if (-Not ($LASTEXITCODE -eq "0")) {
+#   Write-Output "cmake --build for Release mode failed!"
+#   Pop-Location
+#   exit 1
+# }
 
 Pop-Location
 exit 0
