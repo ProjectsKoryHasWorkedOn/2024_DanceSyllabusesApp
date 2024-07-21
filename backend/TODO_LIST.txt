@@ -1,3 +1,9 @@
+Try to get MariaDB to work directly:
+  https://mariadb.com/docs/server/connect/programming-languages/c/connect/
+  Add the include the include path.
+  Copy all the DLLs to the binary directory.
+  Link in all of the static libraries.
+
 https://github.com/CrowCpp/Crow
 
 https://github.com/drogonframework/drogon
