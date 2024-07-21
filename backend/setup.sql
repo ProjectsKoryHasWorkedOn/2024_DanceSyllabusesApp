@@ -1,0 +1,9 @@
+CREATE DATABASE cpp_db;
+USE cpp_db;
+
+CREATE TABLE customer (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(100));
+
+# SELECT * FROM customer;
+# DELETE FROM customer WHERE id=1;

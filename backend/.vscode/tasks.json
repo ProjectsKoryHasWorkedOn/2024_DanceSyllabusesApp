@@ -1,0 +1,11 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "build_cpp",
+			"type": "shell",
+			"command": "${workspaceFolder}\\build.ps1",
+			"args": []
+		}
+	]
+}
