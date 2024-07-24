@@ -34,5 +34,6 @@ QtObject {
 
         // Make sure the user is on the page we want them to be on
         mainStack.replace(page)
+            // Perhaps I should preface page with "qrc:/"
     }
 }

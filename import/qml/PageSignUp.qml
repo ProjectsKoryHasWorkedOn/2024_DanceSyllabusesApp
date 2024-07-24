@@ -205,6 +205,12 @@ Item {
             // @todo: Store user details in a database
                 // @todo: If user email doesn't match existing user email in database
             user_session_details_instance.page = "PageLogin.qml"
+
+            // Clear what's in the fields
+                // Not stricly necessary
+            user_name_field.clear()
+            password_field.clear()
+            email_field.clear()
         }
     }
 

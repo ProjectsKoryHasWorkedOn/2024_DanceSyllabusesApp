@@ -153,6 +153,11 @@ Item {
 
                 // @todo: Validate that what user entered matches a user in the database
                 user_session_details_instance.page = "PageProfile.qml"
+
+                // Clear what's in the fields
+                    // Not stricly necessary
+                password_field.clear()
+                email_field.clear()
             }
     }
 
